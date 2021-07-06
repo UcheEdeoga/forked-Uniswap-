@@ -9,6 +9,7 @@ module.exports = async function (deployer) {
   const pairAddress = '';
   const routerForkAddress = '';
   const pairForkAddress = '';
+  const bonusTokenAddress = '';
 
   await deployer.deploy(
    LiquidityMigrator,
@@ -16,7 +17,7 @@ module.exports = async function (deployer) {
    pairAddress,
    routerForkAddress,
    pairForkAddress,
-   bonusToken.address;
+   bonusTokenAddress
   );
   const liquidityMigrator = await LiquidityMigrator.deployed();
   await bonusToken.setLiquidator(liquidityMigrator.address);

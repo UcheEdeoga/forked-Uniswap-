@@ -10,7 +10,7 @@ module.exports = async function (deployer, network, addresses) {
   let token1Address, token2Address;
   if(network === 'mainnet'){
       token1Address = '';
-      token2Address = '';
+      token2Address =  '';
 
   }else {
       await deployer.deploy(Token1);
